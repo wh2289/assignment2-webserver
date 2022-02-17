@@ -6,7 +6,6 @@ import sys
 
 def webServer(port=13331):
   serverSocket = socket(AF_INET, SOCK_STREAM)
-  #Prepare a server socket
   serverSocket.bind(("", port))
   #Fill in start
 
@@ -38,7 +37,7 @@ def webServer(port=13331):
       except IOError:
         # Send response message for file not found (404)
         #Fill in start
-
+    print('404 Not Found')
         #Fill in end
 
 
@@ -51,7 +50,7 @@ def webServer(port=13331):
       pass
 
   serverSocket.close()
-  sys.exit()  # Terminate the program after sending the corresponding data
+  sys.exit()
 
 if __name__ == "__main__":
   webServer(13331)

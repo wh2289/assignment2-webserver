@@ -1,8 +1,4 @@
-# import socket module
 from socket import *
-# In order to terminate the program
-import sys
-
 
 def webServer(port=13331):
   serverSocket = socket(AF_INET, SOCK_STREAM)
@@ -13,7 +9,7 @@ def webServer(port=13331):
 
   while True:
     #Establish the connection
-    #print('Ready to serve...')
+    print('Ready to serve...')
     connectionSocket, addr = #Fill in start      #Fill in end
     try:
 

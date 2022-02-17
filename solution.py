@@ -1,10 +1,11 @@
 from socket import *
-
+serverPort = 13331
 def webServer(port=13331):
   serverSocket = socket(AF_INET, SOCK_STREAM)
   serverSocket.bind(("", port))
+  serverSocket.listen(1)
   #Fill in start
-
+  print('The server is up on port 1331', serverPort)
   #Fill in end
 
   while True:

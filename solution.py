@@ -29,7 +29,7 @@ def webServer(port=13331):
                 connectionSocket.close()
             except IOError:
 
-                connectionSocket.send('HTTP/1.1 400 Not Found'.encode())
+                connectionSocket.send('\nHTTP/1.1 400 Not Found\n\n'.encode())
 
                 connectionSocket.close()
 

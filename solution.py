@@ -19,8 +19,8 @@ def webServer(port=13331):
                 outputdata =  f.read()
                 print(outputdata)
 
-                
-                connectionSocket.send('HTTP/1.1 200 OK'.encode())
+
+                connectionSocket.send('\nHTTP/1.1 200 OK\n\n'.encode())
 
                 for i in range(0, len(outputdata)):
                     connectionSocket.send(outputdata[i].encode())

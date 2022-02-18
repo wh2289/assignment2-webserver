@@ -8,7 +8,6 @@ def webServer(port=13331):
     serverSocket.listen(1)
     print('Waiting for connection...')
     while True:
-        print('Ready for server...')
         connectionSocket, addr = serverSocket.accept()
         try:
 

@@ -6,17 +6,17 @@ def webServer(port=13331):
     serverSocket = socket(AF_INET, SOCK_STREAM)
     serverSocket.bind(("", port))
     serverSocket.listen(1)
-    print('Waiting for connection')
+    print('Waiting for connection...')
     while True:
         print('Ready to serve...')
         connectionSocket, addr = serverSocket.accept()
         try:
 
             try:
-                message =  connectionSocket.recv(1024)
+                message = connectionSocket.recv(1024)
                 filename = message.split()[1]
                 f = open(filename[1:])
-                outputdata =  f.read()
+                outputdata = f.read()
                 print(outputdata)
 
 

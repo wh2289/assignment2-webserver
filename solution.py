@@ -4,23 +4,20 @@ import sys
 
 def webServer(port=13331):
     serverSocket = socket(AF_INET, SOCK_STREAM)
-    # Prepare a server socket
     serverSocket.bind(("", port))
-    # Fill in start
-
-    # Fill in end
-
+    serverSocket.listen(1)
+    print('Waiting for connection')
     while True:
         # Establish the connection
         # print('Ready to serve...')
-        connectionSocket, addr =  # Fill in start      #Fill in end
+        connectionSocket, addr = serverSocket.accept()
         try:
 
             try:
-                message =  # Fill in start    #Fill in end
+                message =  connectionSocket.recv(1024)
                 filename = message.split()[1]
                 f = open(filename[1:])
-                outputdata =  # Fill in start     #Fill in end
+                outputdata =  f.read()
 
                 # Send one HTTP header line into socket.
                 # Fill in start
